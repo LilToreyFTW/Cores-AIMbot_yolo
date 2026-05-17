@@ -94,7 +94,10 @@ python aim_snap_master.py
 - Enable Color Detection
 - Enable Contour Detection
 - Enable Movement Detection
-- Enable YOLO (Experimental - disabled by default)
+- Enable YOLO AI Detection (recommended for RTX 5070)
+  - YOLO Model: yolov8n.pt (fastest), yolov8s.pt, yolov8m.pt, yolov8l.pt (most accurate)
+  - YOLO Confidence (0.1-1.0)
+  - Use GPU Acceleration (auto-detects CUDA)
 - Min Body Area
 
 **Anti-Detection Tab**
@@ -123,11 +126,16 @@ Each preset has configurable parameters:
 
 ### Detection Methods
 
-The system uses a hybrid approach:
-1. **Template Matching**: Matches your target.png template
-2. **Color Detection**: Filters by Fortnite skin tones (RGB range)
-3. **Contour Detection**: Finds body-shaped contours
-4. **Movement Detection**: Tracks moving objects
+The system uses a hybrid approach with YOLOv8 AI as the primary detection method:
+1. **YOLOv8 AI Detection** (Primary - Highest Priority):
+   - Uses neural network to detect human figures
+   - GPU-accelerated on RTX 5070 for maximum performance
+   - Auto-downloads model on first run
+   - Most accurate detection method
+2. **Template Matching**: Matches your target.png template
+3. **Color Detection**: Filters by Fortnite skin tones (RGB range)
+4. **Contour Detection**: Finds body-shaped contours
+5. **Movement Detection**: Tracks moving objects
 
 ### Anti-Detection
 
