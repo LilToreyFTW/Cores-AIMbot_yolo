@@ -814,6 +814,7 @@ class AimbotEngine(QThread):
     Handles mouse movement with anti-detection considerations.
     """
     aim_complete = pyqtSignal()
+    target_position = pyqtSignal(int, int)  # Emits target x, y when aiming
     
     def __init__(self, config: Config):
         super().__init__()
