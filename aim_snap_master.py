@@ -828,23 +828,31 @@ class AimbotEngine(QThread):
         self.target_velocity = (0, 0)
     
     def update_target(self, target: dict):
-        """Update current target with new detection."""
+        """Update current target and estimate velocity."""
         if target is None:
             self.current_target = None
-            self.target_velocity = (0, 0)
+            self.target_history = []
             return
         
-        # Calculate velocity if we have previous target
-        if self.current_target is not None:
-            dt = time.time() - self.last_aim_time
+        # Emit target position for FOV tracking
+        self.target_position.emit(target['x'], target['y'])
+        
+        # Calculate velocity from history
+        if len(self.target_history) > 0:
+            last_target = self.target_history[-1]
+            dt = time.time() - last_target['timestamp']
             if dt > 0:
-                vx = (target['screen_x'] - self.current_target['screen_x']) / dt
-                vy = (target['screen_y'] - self.current_target['screen_y']) / dt
-                # Smooth velocity
-                self.target_velocity = (
-                    self.target_velocity[0] * 0.7 + vx * 0.3,
-                    self.target_velocity[1] * 0.7 + vy * 0.3
-                )
+                vx = (target['x'] - last_target['x']) / dt
+                vy = (target['y'] - last_target['y']) / dt
+                target['velocity'] = (vx, vy)
+        
+        target['timestamp'] = time.time()
+        self.current_target = target
+        self.target_history.append(target)
+        
+        # Keep only recent history
+        if len(self.target_history) > 10:
+            self.target_history.pop(0)
         
         self.current_target = target
         self.last_aim_time = time.time()
