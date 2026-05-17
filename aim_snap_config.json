@@ -10,6 +10,9 @@
     "enable_contour_detection": true,
     "enable_movement_detection": true,
     "enable_yolo": false,
+    "yolo_model": "yolov8n.pt",
+    "yolo_confidence": 0.5,
+    "yolo_use_gpu": true,
     "min_body_area": 320,
     "color_filter_lower": [
         100,

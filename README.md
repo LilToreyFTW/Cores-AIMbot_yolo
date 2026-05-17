@@ -11,7 +11,7 @@ A professional, highly configurable, and feature-rich aim assistance tool for Fo
 - **FOV Circle** size slider + visual overlay option (transparent always-on-top window)
 - **Smoothing/Acceleration** control per preset
 - **Target Priority**: Head / Upper Body / Center Mass / Nearest
-- **Hotkey support** (Right Mouse Button hold to activate, or custom bind)
+- **Hotkey support** (P key to toggle ON/OFF, Right Mouse Button hold to snap aim)
 - **Auto-detect Fortnite window** + fallback to primary monitor
 - **Save/Load settings** (JSON config)
 
@@ -83,7 +83,8 @@ python aim_snap_master.py
 - Aim Mode: Aim Assist / Trigger Bot
 - Snap Strength Preset: Weak / Medium / Strong / Instant
 - Target Priority: Head / Upper Body / Center Mass / Nearest
-- Activation Key: mouse_right / mouse_left / mouse_middle / x / z / shift
+- Activation Key (Hold to Snap): mouse_right / mouse_left / mouse_middle / x / z / shift
+- Toggle Key (P to Toggle On/Off): P (fixed)
 
 **FOV Tab**
 - FOV Size slider (50-500 pixels)

@@ -4207,3 +4207,146 @@
 2026-05-17 13:10:01,557 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
 2026-05-17 13:10:01,994 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
 2026-05-17 13:10:02,451 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:36,770 - __main__ - INFO - Configuration loaded from aim_snap_config.json
+2026-05-17 13:26:37,264 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:37,278 - __main__ - INFO - Template loaded: (425, 283, 3)
+2026-05-17 13:26:37,750 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:37,916 - __main__ - INFO - FOV overlay attached to Fortnite window (HWND: 1118000)
+2026-05-17 13:26:38,135 - __main__ - INFO - Main window initialized
+2026-05-17 13:26:38,135 - __main__ - INFO - Aimbot engine started
+2026-05-17 13:26:38,136 - __main__ - INFO - Detection engine started
+2026-05-17 13:26:38,162 - __main__ - INFO - Application started
+2026-05-17 13:26:38,162 - __main__ - INFO - Activation key listener started for: mouse_right
+2026-05-17 13:26:38,162 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:38,408 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:38,639 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:38,917 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:39,102 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:39,367 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:39,552 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:39,660 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:39,783 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:40,104 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:40,230 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:40,660 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:40,877 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:41,084 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:41,213 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:41,237 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:41,378 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:41,733 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:41,752 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:41,877 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:42,048 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:42,188 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:42,249 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:42,418 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:42,736 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:43,100 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:43,268 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:43,377 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:43,642 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:43,803 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:44,247 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:44,247 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:44,486 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:44,694 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:45,078 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:45,132 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:45,526 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:45,543 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:45,977 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:45,977 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:46,242 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:46,407 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:46,634 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:46,857 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:47,007 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:47,304 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:47,472 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:47,725 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:47,909 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:48,187 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:48,232 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:48,587 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:48,614 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:48,755 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:49,035 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:49,035 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:49,408 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:49,474 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:49,579 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:49,859 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:49,948 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:50,153 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:50,339 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:50,386 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:50,682 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:50,806 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:51,234 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:51,234 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:51,412 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:51,672 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:51,876 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:52,121 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:52,156 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:52,280 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:52,565 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:52,809 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:53,018 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:53,217 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:53,455 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:53,875 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:53,885 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:54,101 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:54,316 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:54,753 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:54,753 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:54,876 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:55,188 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:55,528 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:55,628 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:55,775 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:56,068 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:56,246 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:56,507 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:56,649 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:56,967 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:57,009 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:57,471 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:57,473 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:57,659 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:57,915 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:58,345 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:58,347 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:58,562 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:58,804 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:58,954 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:59,246 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:59,424 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:59,710 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:26:59,710 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:26:59,987 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:00,132 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:00,468 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:00,589 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:00,741 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:01,025 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:01,454 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:01,454 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:01,867 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:01,889 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:02,036 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:02,252 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:02,328 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:02,510 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:02,765 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:02,782 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:03,109 - __main__ - ERROR - Detection loop error: '_thread._local' object has no attribute 'srcdc'
+2026-05-17 13:27:03,215 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:03,327 - __main__ - INFO - Detection engine stopped
+2026-05-17 13:27:03,342 - __main__ - INFO - Aimbot engine stopped
+2026-05-17 13:27:03,438 - __main__ - INFO - Configuration saved to aim_snap_config.json
+2026-05-17 13:27:03,925 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:04,428 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)
+2026-05-17 13:27:04,863 - __main__ - INFO - Found Fortnite window at (0, 0, 1920, 1080)

@@ -129,7 +129,8 @@ class Config:
     color_filter_upper: List[int] = None
     
     # Hotkey settings
-    activation_key: str = "mouse_right"
+    activation_key: str = "mouse_right"  # Hold to snap aim
+    toggle_key: str = "p"  # Toggle aimbot on/off
     
     # Anti-detection
     random_delay_min: float = 0.0
@@ -732,10 +733,12 @@ class DetectionEngine(QThread):
 class ActivationKeyListener(QThread):
     """Listens for activation key presses (mouse or keyboard)."""
     key_state_changed = pyqtSignal(bool)
+    toggle_requested = pyqtSignal()
     
-    def __init__(self, activation_key: str):
+    def __init__(self, activation_key: str, toggle_key: str):
         super().__init__()
         self.activation_key = activation_key
+        self.toggle_key = toggle_key
         self.running = False
         self.mouse_listener = None
         self.keyboard_listener = None
@@ -748,6 +751,12 @@ class ActivationKeyListener(QThread):
     def on_key_press(self, key):
         """Handle keyboard key press."""
         try:
+            # Check for toggle key (P key)
+            if hasattr(key, 'char') and key.char == self.toggle_key:
+                self.toggle_requested.emit()
+                return
+            
+            # Check for activation key
             if hasattr(key, 'char') and key.char == self.activation_key:
                 self.key_state_changed.emit(True)
         except AttributeError:
@@ -774,15 +783,14 @@ class ActivationKeyListener(QThread):
             self.mouse_listener = mouse.Listener(on_click=self.on_mouse_press)
             self.mouse_listener.start()
         
-        # Start keyboard listener if activation key is keyboard key
-        if not self.activation_key.startswith("mouse_"):
-            self.keyboard_listener = keyboard.Listener(
-                on_press=self.on_key_press,
-                on_release=self.on_key_release
-            )
-            self.keyboard_listener.start()
+        # Start keyboard listener (for both toggle and activation keys)
+        self.keyboard_listener = keyboard.Listener(
+            on_press=self.on_key_press,
+            on_release=self.on_key_release
+        )
+        self.keyboard_listener.start()
         
-        logger.info(f"Activation key listener started for: {self.activation_key}")
+        logger.info(f"Key listener started - Toggle: {self.toggle_key}, Activation: {self.activation_key}")
         
         # Keep thread alive
         while self.running:
@@ -1159,7 +1167,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.aimbot_engine = AimbotEngine(self.config)
         self.fov_overlay = FovOverlayWindow(self.config)
         self.debug_window = DebugWindow()
-        self.activation_key_listener = ActivationKeyListener(self.config.activation_key)
+        self.activation_key_listener = ActivationKeyListener(self.config.activation_key, self.config.toggle_key)
         
         # Setup UI
         self.setup_ui()
@@ -1411,12 +1419,18 @@ class MainWindow(QtWidgets.QMainWindow):
         self.target_priority_combo.setCurrentText(self.config.target_priority)
         general_layout.addWidget(self.target_priority_combo)
         
-        # Activation key
-        general_layout.addWidget(QtWidgets.QLabel("Activation Key:"))
+        # Activation key (hold to snap)
+        general_layout.addWidget(QtWidgets.QLabel("Activation Key (Hold to Snap):"))
         self.activation_key_combo = QtWidgets.QComboBox()
         self.activation_key_combo.addItems(["mouse_right", "mouse_left", "mouse_middle", "x", "z", "shift"])
         self.activation_key_combo.setCurrentText(self.config.activation_key)
         general_layout.addWidget(self.activation_key_combo)
+        
+        # Toggle key (toggle on/off)
+        general_layout.addWidget(QtWidgets.QLabel("Toggle Key (P to Toggle On/Off):"))
+        self.toggle_key_label = QtWidgets.QLabel(f"P")
+        self.toggle_key_label.setStyleSheet("color: #00ff00; font-weight: bold;")
+        general_layout.addWidget(self.toggle_key_label)
         
         general_layout.addStretch()
         general_tab.setLayout(general_layout)
@@ -1597,6 +1611,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.detection_engine.performance_stats.connect(self.on_performance_stats)
         self.aimbot_engine.aim_complete.connect(self.on_aim_complete)
         self.activation_key_listener.key_state_changed.connect(self.on_activation_key_changed)
+        self.activation_key_listener.toggle_requested.connect(self.toggle_aim_snap)
     
     def toggle_aim_snap(self):
         """Toggle aim snap on/off."""
@@ -1678,6 +1693,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.config.snap_preset = self.snap_preset_combo.currentText()
         self.config.target_priority = self.target_priority_combo.currentText()
         self.config.activation_key = self.activation_key_combo.currentText()
+        self.config.toggle_key = self.config.toggle_key  # Currently fixed to 'p'
         self.config.fov_size = self.fov_size_spin.value()
         self.config.show_fov_overlay = self.show_fov_overlay_check.isChecked()
         self.config.template_threshold = self.template_threshold_spin.value()
@@ -1712,6 +1728,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.snap_preset_combo.setCurrentText(self.config.snap_preset)
             self.target_priority_combo.setCurrentText(self.config.target_priority)
             self.activation_key_combo.setCurrentText(self.config.activation_key)
+            self.toggle_key_label.setText(self.config.toggle_key.upper())
             self.fov_size_spin.setValue(self.config.fov_size)
             self.show_fov_overlay_check.setChecked(self.config.show_fov_overlay)
             self.template_threshold_spin.setValue(self.config.template_threshold)
