@@ -1,0 +1,32 @@
+{
+    "enabled": false,
+    "aim_mode": "Aim Assist",
+    "snap_preset": "Strong",
+    "target_priority": "Nearest",
+    "fov_size": 85,
+    "show_fov_overlay": true,
+    "template_threshold": 0.72,
+    "enable_color_detection": true,
+    "enable_contour_detection": true,
+    "enable_movement_detection": true,
+    "enable_yolo": false,
+    "min_body_area": 320,
+    "color_filter_lower": [
+        100,
+        80,
+        60
+    ],
+    "color_filter_upper": [
+        180,
+        150,
+        130
+    ],
+    "activation_key": "mouse_right",
+    "random_delay_min": 0.0,
+    "random_delay_max": 0.05,
+    "humanization_factor": 0.3,
+    "detection_fps_limit": 60,
+    "debug_mode": false,
+    "minimize_to_tray": false,
+    "window_opacity": 0.95
+}
