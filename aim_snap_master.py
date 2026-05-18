@@ -849,17 +849,10 @@ class AimbotEngine(QThread):
         target['timestamp'] = time.time()
         self.current_target = target
         self.target_history.append(target)
+        self.last_aim_time = time.time()
         
         # Keep only recent history
         if len(self.target_history) > 10:
-            self.target_history.pop(0)
-        
-        self.current_target = target
-        self.last_aim_time = time.time()
-        
-        # Maintain target history
-        self.target_history.append(target)
-        if len(self.target_history) > 5:
             self.target_history.pop(0)
     
     def predict_target_position(self, target: dict, prediction_time: float) -> Tuple[int, int]:
@@ -984,12 +977,31 @@ class FovOverlayWindow(QtWidgets.QWidget):
         self.setup_geometry()
         self.attach_to_fortnite()
         
+        # Target tracking
+        self.target_x = None
+        self.target_y = None
+        self.is_aiming = False
+        
         # Timer to continuously track Fortnite window position
         self.position_timer = QTimer()
         self.position_timer.timeout.connect(self.track_window_position)
         self.position_timer.start(100)  # Check every 100ms
         
         self.hide()
+    
+    def set_target_position(self, x: int, y: int):
+        """Update target position for FOV tracking."""
+        self.target_x = x
+        self.target_y = y
+        self.is_aiming = True
+        self.update()  # Trigger repaint
+    
+    def clear_target(self):
+        """Clear target position and return to center."""
+        self.target_x = None
+        self.target_y = None
+        self.is_aiming = False
+        self.update()  # Trigger repaint
     
     def attach_to_fortnite(self):
         """Attach overlay window to Fortnite window using win32gui."""
@@ -1056,8 +1068,12 @@ class FovOverlayWindow(QtWidgets.QWidget):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
         
-        # Get center of window
-        center = self.rect().center()
+        # Get center position (target if aiming, otherwise screen center)
+        if self.is_aiming and self.target_x is not None and self.target_y is not None:
+            center = QPoint(self.target_x, self.target_y)
+        else:
+            center = self.rect().center()
+        
         radius = self.config.fov_size
         
         # Draw FOV circle
@@ -1619,6 +1635,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.detection_engine.target_detected.connect(self.on_target_detected)
         self.detection_engine.performance_stats.connect(self.on_performance_stats)
         self.aimbot_engine.aim_complete.connect(self.on_aim_complete)
+        self.aimbot_engine.target_position.connect(self.on_target_position)
         self.activation_key_listener.key_state_changed.connect(self.on_activation_key_changed)
         self.activation_key_listener.toggle_requested.connect(self.toggle_aim_snap)
     
@@ -1693,7 +1710,14 @@ class MainWindow(QtWidgets.QMainWindow):
     def on_activation_key_changed(self, pressed: bool):
         """Handle activation key state change."""
         self.detection_engine.set_activation_key_state(pressed)
+        if not pressed:
+            # Clear FOV target when activation key is released
+            self.fov_overlay.clear_target()
         logger.debug(f"Activation key state: {pressed}")
+    
+    def on_target_position(self, x: int, y: int):
+        """Handle target position update for FOV tracking."""
+        self.fov_overlay.set_target_position(x, y)
     
     def save_settings(self):
         """Save current settings to config file."""
